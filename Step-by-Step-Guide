@@ -1,0 +1,28 @@
+This issue may occur if the Component-Based Servicing (CBS) manifest is corrupted.
+
+To check the system Files, do this do both of these:
+
+Perform System File Check (SFC)
+Follow the steps:
+
+a. Press “Windows Key" to open Start menu
+
+b. Type “cmd” without quotes in the search box.
+
+c. On the left pane, right click on the “cmd” option and select “Run as Administrator”.
+
+d. Type ‘sfc /scannow’ without quotes and hit enter.
+
+
+ run the System update readiness command. It detects incorrect manifests, cabinets or registry data, it may replace the incorrect data with corrected version available. Follow the steps.
+Open Command Prompt as indicated above.
+In the Administrator: Command Prompt window, type the following commands. Press Enter key after each command:
+DISM.exe /Online /Cleanup-image /Scanhealth
+
+DISM.exe /Online /Cleanup-image /Restorehealth
+
+Re-run the first command:
+sfc /scannow
+and check to make sure that everything has been successfully resolved.
+
+To close the Administrator: Command prompt window, type Exit, and then press Enter.
